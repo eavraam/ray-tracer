@@ -6,6 +6,7 @@
 
 #include <iostream>
 
+// alias of vec3 for readability
 using color = vec3;
 
 void write_color(std::ostream &out, color pixel_color) {

@@ -1,4 +1,4 @@
-Ray Tracing in one weekend.
+Ray Tracing in One Weekend.
 
 Temp README.md file with basic _informal_ information.
 
