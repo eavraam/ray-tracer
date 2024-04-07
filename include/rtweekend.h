@@ -8,6 +8,7 @@
 // common headers
 #include "ray.h"
 #include "vec3.h"
+#include "interval.h"
 
 // using
 using std::shared_ptr;
