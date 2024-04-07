@@ -19,4 +19,4 @@ Since the file is written to the standard output stream, we need to redirect it 
 
 ## Result so far
 
-<img src="image.png" width="640" height="360">
+<img src="/images/image.png" width="640" height="360">
