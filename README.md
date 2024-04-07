@@ -1,6 +1,6 @@
-Ray Tracing in One Weekend.
+## Ray Tracing in One Weekend.
 
-Temp README.md file with basic _informal_ information.
+* Temp README.md file with basic _informal_ information.
 
 The project is using CMake in Visual Studio 2022 and is targeting C++ 20.
 
@@ -16,3 +16,7 @@ For now, running the project will output in the console the numbers of the (int)
 - In a console (e.g. press CTRL + ` in Visual Studio 2022 to open the Developer PowerShell), type: ```./RayTracing.exe > ../../images/image.ppm```
 
 Since the file is written to the standard output stream, we need to redirect it to an image file. Specifically, this image file will be located in the `/root directory/images/` folder. To see an actual image (and not just plain numbers in text), use a PPM Viewer and open the `image.ppm` file.
+
+## Result so far
+
+<img src="image.png" width="640" height="360">
