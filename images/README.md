@@ -1,3 +1,3 @@
 ## Result so far
 
-<img src="image.ppm" width="650" height="450">
+<img src="image.png" width="650" height="450">
