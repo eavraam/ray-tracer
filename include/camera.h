@@ -97,9 +97,10 @@ private:
         }
         
         Hit_record hit_rec;
-		
-        if (world.hit(ray, Interval(0, infinity), hit_rec)) {
-            vec3 direction = random_on_hemisphere(hit_rec.normal);
+		// interval starts at 0.001 to approximate the floating point rounding errors
+        // leading to shadow acne
+        if (world.hit(ray, Interval(0.001, infinity), hit_rec)) {
+            vec3 direction = hit_rec.normal + random_unit_vector();
 			return 0.5f * ray_color(Ray(hit_rec.p, direction), depth - 1, world);
 		}
 
