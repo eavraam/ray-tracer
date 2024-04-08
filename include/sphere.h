@@ -2,13 +2,12 @@
 #define SPHERE_H
 
 #include "hittable.h"
-#include "vec3.h"
 
-class sphere : public hittable {
+class Sphere : public Hittable {
 public:
-	sphere(point3 _center, double _radius) : center(_center), radius(_radius) {};
+	Sphere(point3 _center, double _radius) : center(_center), radius(_radius) {};
 
-	bool hit(const ray& ray, interval ray_t, hit_record& hit_rec) const override {
+	bool hit(const Ray& ray, Interval ray_t, Hit_record& hit_rec) const override {
 		vec3 dist = ray.origin() - center;
 		auto a = ray.direction().length_squared();
 		auto half_b = dot(dist, ray.direction());

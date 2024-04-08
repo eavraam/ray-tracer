@@ -4,8 +4,10 @@
 #include <cmath>
 #include <limits>
 #include <memory>
+#include <iostream>
 
 // common headers
+#include "color.h"
 #include "ray.h"
 #include "vec3.h"
 #include "interval.h"

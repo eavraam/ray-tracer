@@ -1,13 +1,13 @@
 #ifndef INTERVAL_H
 #define INTERVAL_H
 
-const static interval empty   (+infinity, -infinity);
-const static interval universe(-infinity, +infinity);
+const static Interval empty   (+infinity, -infinity);
+const static Interval universe(-infinity, +infinity);
 
-class interval {
+class Interval {
 public:
-	interval() : min(+infinity), max(-infinity) {} // Default interval is empty
-    interval(double _min, double _max) : min(_min), max(_max) {}
+    Interval() : min(+infinity), max(-infinity) {} // Default interval is empty
+    Interval(double _min, double _max) : min(_min), max(_max) {}
 
     bool contains(double x) const {
         return min <= x && x <= max;
@@ -19,7 +19,7 @@ public:
 
 public:
 	double min, max;
-	static const interval empty, universe;
+	static const Interval empty, universe;
 };
 
 
