@@ -8,6 +8,7 @@
 #include <iostream>
 
 // using
+using std::fabs;
 using std::shared_ptr;
 using std::make_shared;
 using std::sqrt;

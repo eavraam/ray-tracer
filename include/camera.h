@@ -3,6 +3,7 @@
 
 #include "rtweekend.h"
 #include "hittable.h"
+#include "material.h"
 
 class Camera {
 public:
@@ -100,8 +101,12 @@ private:
 		// interval starts at 0.001 to approximate the floating point rounding errors
         // leading to shadow acne
         if (world.hit(ray, Interval(0.001, infinity), hit_rec)) {
-            vec3 direction = hit_rec.normal + random_unit_vector();
-			return 0.5f * ray_color(Ray(hit_rec.p, direction), depth - 1, world);
+            Ray scattered;
+            Color attenuation;
+            if (hit_rec.material->scatter(ray, hit_rec, attenuation, scattered)) {
+                return attenuation * ray_color(scattered, depth - 1, world);
+            }
+            return Color(0, 0, 0);
 		}
 
 		vec3 unit_direction = unit_vector(ray.direction());

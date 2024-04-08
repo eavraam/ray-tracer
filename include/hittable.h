@@ -1,10 +1,13 @@
 #ifndef HITTABLE_H
 #define HITTABLE_H
 
+class Material; // forward declaration
+
 class Hit_record {
 public:
 	point3 p;
 	vec3 normal;
+	shared_ptr<Material> material;
 	double t;
 	bool front_face;
 

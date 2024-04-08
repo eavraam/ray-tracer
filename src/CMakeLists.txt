@@ -8,7 +8,16 @@
 # Add source to this project's executable.
 add_executable( RayTracing
 	main.cpp
-	${PROJECT_SOURCE_DIR}/include/color.h
+    ${PROJECT_SOURCE_DIR}/include/camera.h
+    ${PROJECT_SOURCE_DIR}/include/color.h
+    ${PROJECT_SOURCE_DIR}/include/hittable.h
+    ${PROJECT_SOURCE_DIR}/include/hittable_list.h
+    ${PROJECT_SOURCE_DIR}/include/interval.h
+    ${PROJECT_SOURCE_DIR}/include/material.h
+    ${PROJECT_SOURCE_DIR}/include/ray.h
+    ${PROJECT_SOURCE_DIR}/include/rtweekend.h
+    ${PROJECT_SOURCE_DIR}/include/sphere.h
+    ${PROJECT_SOURCE_DIR}/include/vec3.h
 )
 
 # If there are more source files, explicitly list them here
