@@ -16,8 +16,8 @@ int main() {
     auto ground_material = make_shared<Lambertian>(Color(0.5, 0.5, 0.5));
     world.add(make_shared<Sphere>(point3(0, -1000, 0), 1000, ground_material));
 
-    for (int a = -11; a < 11; a++) {
-        for (int b = -11; b < 11; b++) {
+    for (int a = -3; a < 3; a++) {
+        for (int b = -3; b < 3; b++) {
             auto choose_mat = random_double();
             point3 center(a + 0.9 * random_double(), 0.2, b + 0.9 * random_double());
 
@@ -63,8 +63,8 @@ int main() {
 
 	camera.aspect_ratio		 = 16.f / 9.f;
 	camera.image_width		 = 1200;
-	camera.samples_per_pixel = 500;
-	camera.max_depth		 = 50;
+	camera.samples_per_pixel = 100;
+	camera.max_depth		 = 10;
 
 	camera.vfov		 = 20;
 	camera.look_from = point3(13, 2, 3);
